@@ -6,12 +6,81 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="collapse-{{ eachEvent.id }}">
-        {{ eachEvent.name }}</a> / {{ eachEvent.country }} - {{ eachEvent.created_at }}
+        Event {{ $index + 1 }}</a> / {{ eachEvent.country }} - {{ eachEvent.created_at }}
       </h4>
     </div>
     <div id="collapse-{{ eachEvent.id }}" class="panel-collapse collapse in">
       <div class="panel-body">
-        {{ eachEvent.description }}
+
+        <form class="form-horizontal" id="{{ eachEvent.id }}" role="form" ng-submit="update()">
+          <input type="hidden" class="form-control" id="event_id" value="{{ eachEvent.id }}" ng-model="event_id">
+          <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="name" placeholder="Name", value="{{ eachEvent.name }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="description" class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="description" placeholder="Description", value="{{ eachEvent.description }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address" class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="address" placeholder="Description", value="{{ eachEvent.address }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="zip" class="col-sm-2 control-label">Zip</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="zip" placeholder="Description", value="{{ eachEvent.zip }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="country" class="col-sm-2 control-label">Country</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="country" placeholder="Description", value="{{ eachEvent.country }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="start_date" class="col-sm-2 control-label">start_date</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="start_date" placeholder="Start Date", value="{{ eachEvent.start_date }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="end_date" class="col-sm-2 control-label">end_date</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="end_date" placeholder="end_date", value="{{ eachEvent.end_date }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="category" class="col-sm-2 control-label">category</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="category" placeholder="category", value="{{ eachEvent.category }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="hide" class="col-sm-2 control-label">hide</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="hide" placeholder="hide", value="{{ eachEvent.hide }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="coordinates" class="col-sm-2 control-label">coordinates</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="coordinates" placeholder="coordinates", value="{{ eachEvent.coordinates }}">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Save</button>
+            </div>
+          </div>
+        </form>
+
       </div>
     </div>
   </div>
