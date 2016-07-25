@@ -14,7 +14,7 @@ angular.module('labadeeClientApp')
       // console.log("* Hello world [debug]: ", configuration);
       return {
         getEvent: $resource(configuration.backend.baseUrl + 'events/:eventId', {}, {
-          query: {method:'GET', params:{thing_id:'@eventId'}, isArray:false}
+          query: {method:'GET', params:{thing_id:'@eventId'}, isArray:true}
         }),
         getAll: $resource(configuration.backend.baseUrl + 'events', {}, {
           query: {method:'GET', params:{}, isArray:true}

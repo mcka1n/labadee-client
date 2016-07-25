@@ -14,7 +14,9 @@ angular.module('labadeeClientApp')
         'Event Name #2',
         'Event Name #3'
       ];
-      
+
     $scope.event = Event.getEvent.query({eventId: $routeParams.event});
     // $scope.eventsAttendees = Attendee.getAttendees.go({eventId: $routeParams.event});
+    $scope.allEvents = Event.getAll.query();
+
   });

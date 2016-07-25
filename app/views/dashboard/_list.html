@@ -2,7 +2,8 @@ All Events:
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-8" ng-repeat="eachThing in allThings">
+    <div class="col-md-8" ng-repeat="eachEvent in allEvents">
+      {{ eachEvent.id }} <br>
       <span>
         {{ eachEvent.name }}: {{ eachEvent.description }}, {{ eachEvent.created_at }}
       </span>

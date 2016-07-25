@@ -81,6 +81,7 @@ angular
       },
       'responseError': function(response) {
           if(response.status === 401 || response.status === 403) {
+              localStorageService.set('token', '');
               $location.path('/signin');
           }
           return $q.reject(response);
