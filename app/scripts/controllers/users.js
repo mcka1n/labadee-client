@@ -16,7 +16,13 @@ angular.module('labadeeClientApp')
          console.log("sign in sent: ", data, data.auth_token);
          if(data.success == true){
            localStorageService.set('token', data.auth_token);
-           window.location = "/";
+           localStorageService.set('email', $scope.email);
+
+           if($scope.email == 'admin@admin.com'){
+             window.location = "/admin";
+           }else{
+            window.location = "/";
+           }
          }else{
            $rootScope.error = 'Failed to signin';
          }
@@ -28,7 +34,13 @@ angular.module('labadeeClientApp')
           console.log("sign up sent: ", data, data.auth_token);
           if(data.auth_token){
             localStorageService.set('token', data.auth_token);
-            window.location = "/";
+            localStorageService.set('email', $scope.email);
+
+            if($scope.email == 'admin@admin.com'){
+              window.location = "/admin";
+            }else{
+             window.location = "/";
+            }
           }else{
             $rootScope.error = 'Failed to signup';
           }

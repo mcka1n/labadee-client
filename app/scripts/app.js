@@ -50,6 +50,11 @@ angular
         controller: 'EventsCtrl',
         controllerAs: 'events'
       })
+      .when('/admin', {
+        templateUrl: 'views/admin/_list.html',
+        controller: 'AdminsCtrl',
+        controllerAs: 'admins'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,18 @@
+<h1>Backend</h1>
+<h2>Labadee Events</h2>
+
+<div class="panel-group" id="accordion" ng-repeat="eachEvent in allEvents">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="collapse-{{ eachEvent.id }}">
+        {{ eachEvent.name }}</a> / {{ eachEvent.country }} - {{ eachEvent.created_at }}
+      </h4>
+    </div>
+    <div id="collapse-{{ eachEvent.id }}" class="panel-collapse collapse in">
+      <div class="panel-body">
+        {{ eachEvent.description }}
+      </div>
+    </div>
+  </div>
+</div>
