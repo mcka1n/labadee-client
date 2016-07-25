@@ -29,6 +29,7 @@ module.exports = function(config) {
       'app/components/angular-sanitize/angular-sanitize.js',
       'app/components/angular-touch/angular-touch.js',
       'app/components/angular-bootstrap/ui-bootstrap-tpls.js',
+      'app/components/angular-local-storage/dist/angular-local-storage.js',
       'app/components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

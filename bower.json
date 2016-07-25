@@ -11,6 +11,7 @@
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
     "angular-bootstrap": "^2.0.0",
+    "angular-local-storage": "~0.1.5",
     "jquery": "1.9.1 - 2"
   },
   "devDependencies": {

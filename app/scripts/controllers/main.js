@@ -9,7 +9,7 @@
  */
 angular.module('labadeeClientApp')
   .controller('MainCtrl', function ($scope) {
-    this.awesomeThings = [
+    $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'

@@ -1,0 +1,6 @@
+{
+  "backend": {
+    "baseUrl": "tbd:3000/v1/",
+    "key": "TODO-for-staging"
+  }
+}
